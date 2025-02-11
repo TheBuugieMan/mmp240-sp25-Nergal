@@ -1,0 +1,50 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4e5d8; /* Light brown background */
+    margin: 20px;
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #5a3e1b; /* Dark chocolate color */
+}
+
+h2 {
+    font-size: 24px;
+    color: #7b4a2d;
+}
+
+/* Image */
+img {
+    width: 50%;
+    border: 5px solid #5a3e1b;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Lists */
+ul, ol {
+    text-align: left;
+    margin: 0 auto;
+    width: 50%;
+}
+
+ul li, ol li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+    width: 50%;
+    margin: 0 auto;
+    font-style: italic;
+}
