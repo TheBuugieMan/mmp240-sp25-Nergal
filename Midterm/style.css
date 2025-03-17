@@ -129,3 +129,20 @@ html, body {
     letter-spacing: 0;
     line-height: normal;
 }
+
+.episode-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: black;
+}
+
+.episode {
+    width: 100%;
+    height: 150px;
+    background-color: #ccc; /* Placeholder for now */
+    background-size: cover;
+    background-position: center;
+}
+
