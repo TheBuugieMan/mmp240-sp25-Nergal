@@ -15,7 +15,7 @@ html, body {
 .desktop .overlap-wrapper {
     background-color: transparent;
     overflow: hidden;
-    width: 1440px;
+    width: 100vw;
     height: 1024px;
 }
 
@@ -31,6 +31,16 @@ html, body {
     top: 59px;
     left: 0;
     object-fit: cover;
+}
+
+.image
+{
+position:fixed;
+width: 100vw;
+height: 650px;
+top: 0;
+left: 0;
+object-fit: cover;
 }
 
 .desktop .rectangle {
@@ -118,11 +128,12 @@ html, body {
 }
 
 .desktop .audio-japanese {
-    position: absolute;
-    width: 553px;
+    position: relative;
+    width: 100vw;
     top: 622px;
     left: 887px;
     font-family: "Jacques Francois", Helvetica;
+    margin-top: 60px;
     font-weight: 400;
     color: #ffffff;
     font-size: 24px;
@@ -134,7 +145,7 @@ html, body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    padding: 20px;
+    padding: 130px;
     background-color: black;
 }
 
