@@ -6,13 +6,42 @@
 
     <style>
 
-    #wrapper{
-      max-width:1170px;
-      margin:0 auto;
+    #wrapper {
+      max-width: 1170px;
+      margin: 0 auto;
       font-family: sans-serif;
     }
-      
- /* Add CSS code here */
+
+    /* 1️⃣ All links (normal + visited) have the same color */
+    a {
+      color: #0073e6; /* Change to any color you want */
+      text-decoration: none;
+    }
+
+    /* 2️⃣ Hover effect */
+    a:hover {
+      text-decoration: underline;
+      color: #ff5733; /* Change hover color */
+    }
+
+    /* 3️⃣ Navigation links always black (except hover) */
+    nav ul li a {
+      color: black !important; /* Force black */
+      text-decoration: none;
+    }
+
+    /* 4️⃣ Underline navigation links ONLY on hover */
+    nav ul li a:hover {
+      text-decoration: underline;
+      color: black;
+    }
+
+    /* 5️⃣ Focus effect for input box */
+    input:focus {
+      border: 2px solid #0073e6;
+      background-color: #f0f8ff;
+      outline: none;
+    }
 
     </style>
 
@@ -31,12 +60,16 @@
       </nav>
       <div class="content">
         <h1>Borough of Manhattan Community College</h1>
-        <p><a href="https://www.bmcc.cuny.edu/">BMCC</a> is a college that is alive with ideas and innovation, and supportive of the innate human striving for self-improvement. We offer opportunity to those students who desire it and wish to strive for it.</p>
+        <p>
+          <a href="https://www.bmcc.cuny.edu/">BMCC</a> is a college that is alive with ideas and innovation, 
+          and supportive of the innate human striving for self-improvement. 
+          We offer opportunity to those students who desire it and wish to strive for it.
+        </p>
         <h3>Request More Information</h3>
         <form action="#" method="get">
-        <input type="text" id="emailbox" name="emailbox" placeholder="Your email">
-        <button>Submit</button>
-          </form>
+          <input type="text" id="emailbox" name="emailbox" placeholder="Your email">
+          <button>Submit</button>
+        </form>
       </div> <!-- .content -->
     </div> <!-- #wrapper -->
   </body>
