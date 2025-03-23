@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #000; /* Or any background color you want */
+    background-color: #000; 
 }
 
 .desktop {
@@ -16,41 +16,35 @@ html, body {
     background-color: transparent;
     overflow: hidden;
     width: 100vw;
-    height: 1024px;
+    height: 1064px;
 }
 
 .desktop .overlap {
     position: relative;
-    height: 1034px;
+    height: 934px;
 }
 
-.desktop .image {
+/* .desktop .image {
     position: absolute;
     width: 1440px;
     height: 562px;
     top: 59px;
     left: 0;
     object-fit: cover;
-}
+} */
 
 .image
 {
-position:fixed;
+position:relative;
 width: 100vw;
-height: 650px;
+height: 950px;
 top: 0;
 left: 0;
 object-fit: cover;
+background-attachment: fixed;
+z-index: 1;
 }
 
-.desktop .rectangle {
-    height: 59px;
-    top: 0;
-    background-color: #000000;
-    position: absolute;
-    width: 1440px;
-    left: 0;
-}
 
 .desktop .group {
     position: absolute;
@@ -61,7 +55,7 @@ object-fit: cover;
 }
 
 .desktop .overlap-group {
-    position: relative;
+    position: fixed;
     width: 266px;
     height: 77px;
     background-color: #eca100;
@@ -80,17 +74,20 @@ object-fit: cover;
     line-height: normal;
 }
 
-.desktop .solo-leveling {
+.solo-leveling {
     position: absolute;
     width: 389px;
-    top: 58px;
+    top: -90px;
     left: 32px;
     font-family: "Inter-Regular", Helvetica;
     font-weight: 400;
     color: #ffffff;
-    font-size: 96px;
+    font-size: 136px;
     letter-spacing: 0;
     line-height: normal;
+    padding: 25px 15px;
+
+    z-index: 3;
 }
 
 .desktop .span {
@@ -106,9 +103,9 @@ object-fit: cover;
 }
 
 .desktop .div {
-    height: 100%;
+    height: 30%;
     top: 620px;
-    background-color: #060606;
+    background-color: transparent;
     position: absolute;
     width: 100%;
     left: 0;
@@ -117,7 +114,7 @@ object-fit: cover;
 .desktop .p {
     position: absolute;
     width: 735px;
-    top: 622px;
+    top: -92px;
     left: 0;
     font-family: "Jacques Francois-Regular", Helvetica;
     font-weight: 400;
@@ -129,8 +126,8 @@ object-fit: cover;
 
 .desktop .audio-japanese {
     position: relative;
-    width: 100vw;
-    top: 622px;
+    width: 85%;
+    top: -62px;
     left: 887px;
     font-family: "Jacques Francois", Helvetica;
     margin-top: 60px;
@@ -155,5 +152,99 @@ object-fit: cover;
     background-color: #ccc; /* Placeholder for now */
     background-size: cover;
     background-position: center;
+}
+
+.label {
+    position: absolute;
+    top: 700px; /* Positioning it under the title */
+    left: 50px;
+    background-color: #eca100;
+    padding: 25px 15px;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    z-index: 3;
+    width: 294px;
+    height: 48px;
+}
+
+.label:hover {
+    background-color: #d48c00;
+}
+
+.label .text-wrapper {
+    position: relative;
+    -webkit-text-stroke: 1px #000000;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: -30;
+    line-height: normal;
+    z-index: 3;
+}
+
+.episode-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add a shadow for a card effect */
+    left: 100px;
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 5px; 
+    margin-bottom: 20px; /* Add space between cards */
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(255, 250, 250, 0.159); /* Add a shadow for a card effect */
+    left: 100px;
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 5px; /* Optional: Add rounded corners */
+    margin-bottom: 15px; /* Add space between cards */
+ }
+
+ .card .bio {
+    font-size: 1.0rem;
+    color: #ccc;
+    margin-left: 50px;
+    margin-top: 8px;
+    text-align: center;
+    max-width: 200px;
+    line-height: 1.4;
+}
+
+.card p {
+    font-size: 1.2rem; /* or increase to your liking */
+    font-weight: bold; /* optional, makes it stand out more */
+    margin-top: 8px;
+    color: white; /* or whatever color you want */
+}
+
+.label2 {
+    width: 327px;
+    height: 53px;
+}
+
+.label2 .text-wrapper {
+    position: relative;
+    width: 327px;
+    top: 0;
+    left: 0;
+    -webkit-text-stroke: 1px #e1dfdf;
+    font-family: "Jacques Francois-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
 }
 
