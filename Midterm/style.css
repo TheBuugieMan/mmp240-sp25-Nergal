@@ -24,15 +24,6 @@ html, body {
     height: 934px;
 }
 
-/* .desktop .image {
-    position: absolute;
-    width: 1440px;
-    height: 562px;
-    top: 59px;
-    left: 0;
-    object-fit: cover;
-} */
-
 .image
 {
 position:relative;
@@ -149,14 +140,14 @@ z-index: 1;
 .episode {
     width: 100%;
     height: 150px;
-    background-color: #ccc; /* Placeholder for now */
+    background-color: #ccc; 
     background-size: cover;
     background-position: center;
 }
 
 .label {
     position: absolute;
-    top: 700px; /* Positioning it under the title */
+    top: 700px; 
     left: 50px;
     background-color: #eca100;
     padding: 25px 15px;
@@ -190,26 +181,26 @@ z-index: 1;
 }
 
 .episode-card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add a shadow for a card effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
     left: 100px;
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
     border-radius: 5px; 
-    margin-bottom: 20px; /* Add space between cards */
+    margin-bottom: 20px; 
 }
 
 .cards {
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 4px 8px 0 rgba(255, 250, 250, 0.159); /* Add a shadow for a card effect */
+    box-shadow: 0 4px 8px 0 rgba(255, 250, 250, 0.159); 
     left: 100px;
     padding: 20px;
     text-align: center;
     background-color: black;
     color: white;
-    border-radius: 5px; /* Optional: Add rounded corners */
-    margin-bottom: 15px; /* Add space between cards */
+    border-radius: 5px; 
+    margin-bottom: 15px; 
  }
 
  .card .bio {
@@ -223,10 +214,10 @@ z-index: 1;
 }
 
 .card p {
-    font-size: 1.2rem; /* or increase to your liking */
-    font-weight: bold; /* optional, makes it stand out more */
+    font-size: 1.2rem; 
+    font-weight: bold; 
     margin-top: 8px;
-    color: white; /* or whatever color you want */
+    color: white; 
 }
 
 .label2 {
