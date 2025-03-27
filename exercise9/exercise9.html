@@ -9,9 +9,19 @@
           max-width: 1200px;
           margin-left:auto;
           margin-right:auto;
+      
       }
       .layout img{
         width:100%;
+      }
+      .layout{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+
+      }
+      .one, .five{
+        grid-column-end: span 3;
       }
     </style>
   </head>
