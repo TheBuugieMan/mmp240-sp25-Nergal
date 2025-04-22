@@ -1,0 +1,185 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #111;
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
+  
+  /* Typography */
+  h1, h2, h3 {
+    font-family: 'Jacques Francois', serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0066cc;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Layout Containers */
+  header, footer {
+    background-color: #222;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  nav a {
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Grid Layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  /* Card Styles */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    border-radius: 4px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1.1rem;
+  }
+  
+  .card p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('Images/hero-banner.jpg') no-repeat center center/cover;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    background-color: rgba(0,0,0,0.6);
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border-radius: 8px;
+  }
+  
+  /* Footer */
+  footer p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+
+  /* --------- Responsive Layout --------- */
+@media (max-width: 768px) {
+    header, footer {
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    nav {
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+    }
+  
+    .hero {
+      height: auto;
+      padding: 2rem 1rem;
+      background-size: cover;
+    }
+  
+    .hero h1 {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .card img {
+      height: 180px;
+    }
+  
+    .card h3 {
+      font-size: 1.1rem;
+    }
+  
+    .card p {
+      font-size: 1rem;
+    }
+  
+    .category-card {
+      font-size: 1.1rem;
+      padding: 1rem;
+    }
+  }
+  
+  /* --------- Dark Mode Styles --------- */
+.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  .dark-mode header,
+  .dark-mode footer {
+    background-color: #1f1f1f;
+  }
+  
+  .dark-mode .card {
+    background-color: #1e1e1e;
+    color: #ddd;
+  }
+  
+  .dark-mode nav a {
+    color: #f0f0f0;
+  }
+  
+  .dark-mode .hero h1 {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  
