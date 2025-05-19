@@ -9,42 +9,91 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+  <div class="wrapper">
   <header>
-    <h1 id="logo">CUNY Design</h1>
-    <nav class="main-nav">
-      <ul>
+    <h1 id="logo"><a href="index.html">CUNY Design</a></h1>  
+      <nav>
+      <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="associate.html">Associate</a></li>
-        <li><a href="bachelor.html">Bachelor</a></li>
-        <li><a href="digital.html">Digital Design</a></li>
-        <li><a href="animation.html">Animation</a></li>
-        <li><a href="industrial.html">Industrial Design</a></li>
-        <li><a href="brooklyn.html">Brooklyn</a></li>
-        <li><a href="bronx.html">Bronx</a></li>
-        <li><a href="manhattan.html">Manhattan</a></li>
-        <li><a href="queens.html">Queens</a></li>
+    
+        <li class="dropdown">
+          <a href="#">Degrees</a>
+          <ul class="dropdown-menu">
+            <li><a href="associate.html">Associate</a></li>
+            <li><a href="bachelor.html">Bachelor</a></li>
+          </ul>
+        </li>
+    
+        <li class="dropdown">
+          <a href="#">Discipline</a>
+          <ul class="dropdown-menu">
+            <li><a href="digital.html">Digital Design</a></li>
+            <li><a href="animation.html">Animation</a></li>
+            <li><a href="industrial.html">Industrial Design</a></li>
+          </ul>
+        </li>
+    
+        <li class="dropdown">
+          <a href="#">Borough</a>
+          <ul class="dropdown-menu">
+            <li><a href="brooklyn.html">Brooklyn</a></li>
+            <li><a href="bronx.html">Bronx</a></li>
+            <li><a href="manhattan.html">Manhattan</a></li>
+            <li><a href="queens.html">Queens</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
-    <button id="darkModeToggle">Toggle Dark Mode</button>
+     <button id="darkModeToggle">Toggle Dark Mode</button>
   </header>
-
   <main>
+  </div>
     <section class="category-intro">
-      <h2>Design Programs in Brooklyn</h2>
-      <p>Explore CUNY colleges in Brooklyn offering creative design degrees.</p>
+      <h2>Design Programs in industrial</h2>
+      <p>Explore CUNY colleges in industrial offering creative design degrees.</p>
     </section>
 
     <section class="grid">
-      <!-- Program Card Example -->
       <div class="card">
-        <img src="images/kbcc.jpg" alt="Kingsborough CC Design Program" />
-        <h3>Kingsborough Community College</h3>
-        <p>Graphic Design & Illustration</p>
+        <img src="images/BMCC.jpg" alt="Borough of Manhattan Community College (BMCC)" />
+        <h3>Borough of Manhattan Community College (BMCC)</h3>
+        <p>Multimedia Programming and Design</p>
         <p>Degree: A.S.</p>
-        <p class="description">A hands-on program focused on foundational skills in visual communication and illustration.</p>
-        <a href="https://www.kbcc.cuny.edu/academicdepartments/art/Graphic_Design.html" target="_blank">Learn More</a>
+        <p class="description">Prepares students for careers in companies and organizations that develop, produce, or market multimedia content.</p>
+        <a href="https://www.bmcc.cuny.edu/academics/departments/media-arts-and-technology/multimedia-programming-and-design/" target="_blank">Learn More</a>
       </div>
-      <!-- Copy and paste more cards per program -->
+      <div class="card">
+        <img src="images/CCNY.jpg" alt="City College of New York (CCNY)" />
+        <h3>City College of New York (CCNY)</h3>
+        <p>Electronic Design and Multimedia</p>
+        <p>Degree: B.F.A.</p>
+        <p class="description">Offers courses in graphic design, imaging, illustration, multimedia, 3D design, web design, typography, animation, video, interactive design, and digital photography.</p>
+        <a href="https://www.ccny.cuny.edu/edm" target="_blank">Learn More</a>
+      </div>
+<div class="card">
+        <img src="images/QueensCollege.jpg" alt="Queens College" />
+        <h3>Queens College</h3>
+        <p>Design</p>
+        <p>Degree: B.F.A.</p>
+        <p class="description">Offers concentrations in Communication Design, Animation & Illustration, or Interaction Design, preparing students for various design-based careers.</p>
+        <a href="https://www.qc.cuny.edu/academics/art/design-bfa/" target="_blank">Learn More</a>
+      </div>
+            <div class="card">
+        <img src="images/QueensBoroughCC.png" alt="Queensborough Community College" />
+        <h3>Queensborough Community College</h3>
+        <p>Digital Art and Design</p>
+        <p>Degree: A.S.</p>
+        <p class="description">Structured to prepare students to enter the expanding field of new media and digital design.</p>
+        <a href="https://www.qcc.cuny.edu/academics/degree-programs/digital-art-design.html" target="_blank">Learn More</a>
+      </div>
+      <div class="card">
+        <img src="images/YorkCollege.jpg" alt="York College" />
+        <h3>York College</h3>
+        <p>Studio Art with a focus on Graphic Design</p>
+        <p>Degree: B.A.</p>
+        <p class="description">Offers a Studio Art program where students can focus on graphic design through elective courses.</p>
+        <a href="https://www.york.cuny.edu/" target="_blank">Learn More</a>
+      </div>
     </section>
   </main>
 
@@ -56,5 +105,23 @@
       <a href="https://www.cuny.edu/about/">About CUNY</a>
     </nav>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdowns = document.querySelectorAll(".dropdown");
+  
+      dropdowns.forEach((dropdown) => {
+        dropdown.addEventListener("click", function (e) {
+          // Only trigger on smaller screens
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.classList.toggle("active");
+          }
+        });
+      });
+    });
+  </script>
+
+
 </body>
 </html>

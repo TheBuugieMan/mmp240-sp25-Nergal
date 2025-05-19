@@ -9,26 +9,45 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+  <div class="wrapper">
   <header>
-    <h1 id="logo">CUNY Design</h1>
-    <nav class="main-nav">
-      <ul>
+    <h1 id="logo"><a href="index.html">CUNY Design</a></h1>  
+      <nav>
+      <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="associate.html">Associate</a></li>
-        <li><a href="bachelor.html">Bachelor</a></li>
-        <li><a href="digital.html">Digital Design</a></li>
-        <li><a href="animation.html">Animation</a></li>
-        <li><a href="industrial.html">Industrial Design</a></li>
-        <li><a href="brooklyn.html">Brooklyn</a></li>
-        <li><a href="bronx.html">Bronx</a></li>
-        <li><a href="manhattan.html">Manhattan</a></li>
-        <li><a href="queens.html">Queens</a></li>
+    
+        <li class="dropdown">
+          <a href="#">Degrees</a>
+          <ul class="dropdown-menu">
+            <li><a href="associate.html">Associate</a></li>
+            <li><a href="bachelor.html">Bachelor</a></li>
+          </ul>
+        </li>
+    
+        <li class="dropdown">
+          <a href="#">Discipline</a>
+          <ul class="dropdown-menu">
+            <li><a href="digital.html">Digital Design</a></li>
+            <li><a href="animation.html">Animation</a></li>
+            <li><a href="industrial.html">Industrial Design</a></li>
+          </ul>
+        </li>
+    
+        <li class="dropdown">
+          <a href="#">Borough</a>
+          <ul class="dropdown-menu">
+            <li><a href="brooklyn.html">Brooklyn</a></li>
+            <li><a href="bronx.html">Bronx</a></li>
+            <li><a href="manhattan.html">Manhattan</a></li>
+            <li><a href="queens.html">Queens</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
-    <button id="darkModeToggle">Toggle Dark Mode</button>
+     <button id="darkModeToggle">Toggle Dark Mode</button>
   </header>
-
   <main>
+  </div>
     <section class="category-intro">
       <h2>Design Programs in Brooklyn</h2>
       <p>Explore CUNY colleges in Brooklyn offering creative design degrees.</p>
@@ -37,12 +56,28 @@
     <section class="grid">
       <!-- Program Card Example -->
       <div class="card">
-        <img src="images/kbcc.jpg" alt="Kingsborough CC Design Program" />
+        <img src="images/KingsBorough.png" alt="Kingsborough CC Design Program" />
         <h3>Kingsborough Community College</h3>
         <p>Graphic Design & Illustration</p>
         <p>Degree: A.S.</p>
         <p class="description">A hands-on program focused on foundational skills in visual communication and illustration.</p>
         <a href="https://www.kbcc.cuny.edu/academicdepartments/art/Graphic_Design.html" target="_blank">Learn More</a>
+      </div>
+      <div class="card">
+        <img src="images/City Tech.jpg" alt="New York City College of Technology (City Tech)" />
+        <h3>New York City College of Technology (City Tech)</h3>
+        <p>Communication Design</p>
+        <p>Degree: B.F.A.</p>
+        <p class="description">Offers the only NASAD-accredited BFA in Communication Design within CUNY, preparing students for careers in graphic design, advertising, motion design, illustration, and web design.</p>
+        <a href="https://www.citytech.cuny.edu/communication-design/" target="_blank">Learn More</a>
+      </div>
+      <div class="card">
+        <img src="images/Brooklyn College.jpeg" alt="Brooklyn College" />
+        <h3>Brooklyn College</h3>
+        <p>Art B.A. with a focus on Graphic Design</p>
+        <p>Degree: B.F.A.</p>
+        <p class="description">Provides a comprehensive education in art with opportunities to focus on graphic design through various courses.</p>
+        <a href="https://www.citytech.cuny.edu/communication-design/" target="_blank">Learn More</a>
       </div>
       <!-- Copy and paste more cards per program -->
     </section>
@@ -56,5 +91,23 @@
       <a href="https://www.cuny.edu/about/">About CUNY</a>
     </nav>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdowns = document.querySelectorAll(".dropdown");
+  
+      dropdowns.forEach((dropdown) => {
+        dropdown.addEventListener("click", function (e) {
+          // Only trigger on smaller screens
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.classList.toggle("active");
+          }
+        });
+      });
+    });
+  </script>
+
+
 </body>
 </html>

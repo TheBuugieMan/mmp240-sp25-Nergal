@@ -4,45 +4,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Design Programs in Brooklyn – CUNY Design</title>
+  <title>Design Programs in Bronx – CUNY Design</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
+  <div class="wrapper">
   <header>
-    <h1 id="logo">CUNY Design</h1>
-    <nav class="main-nav">
-      <ul>
+    <h1 id="logo"><a href="index.html">CUNY Design</a></h1>  
+      <nav>
+      <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="associate.html">Associate</a></li>
-        <li><a href="bachelor.html">Bachelor</a></li>
-        <li><a href="digital.html">Digital Design</a></li>
-        <li><a href="animation.html">Animation</a></li>
-        <li><a href="industrial.html">Industrial Design</a></li>
-        <li><a href="brooklyn.html">Brooklyn</a></li>
-        <li><a href="bronx.html">Bronx</a></li>
-        <li><a href="manhattan.html">Manhattan</a></li>
-        <li><a href="queens.html">Queens</a></li>
+    
+        <li class="dropdown">
+          <a href="#">Degrees</a>
+          <ul class="dropdown-menu">
+            <li><a href="associate.html">Associate</a></li>
+            <li><a href="bachelor.html">Bachelor</a></li>
+          </ul>
+        </li>
+    
+        <li class="dropdown">
+          <a href="#">Discipline</a>
+          <ul class="dropdown-menu">
+            <li><a href="digital.html">Digital Design</a></li>
+            <li><a href="animation.html">Animation</a></li>
+            <li><a href="industrial.html">Industrial Design</a></li>
+          </ul>
+        </li>
+    
+        <li class="dropdown">
+          <a href="#">Borough</a>
+          <ul class="dropdown-menu">
+            <li><a href="brooklyn.html">Brooklyn</a></li>
+            <li><a href="bronx.html">Bronx</a></li>
+            <li><a href="manhattan.html">Manhattan</a></li>
+            <li><a href="queens.html">Queens</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
-    <button id="darkModeToggle">Toggle Dark Mode</button>
+     <button id="darkModeToggle">Toggle Dark Mode</button>
   </header>
-
   <main>
+  </div>
     <section class="category-intro">
-      <h2>Design Programs in Brooklyn</h2>
-      <p>Explore CUNY colleges in Brooklyn offering creative design degrees.</p>
+      <h2>Design Programs in Bronx</h2>
+      <p>Explore CUNY colleges in Bronx offering creative design degrees.</p>
     </section>
 
     <section class="grid">
       <!-- Program Card Example -->
       <div class="card">
-        <img src="images/kbcc.jpg" alt="Kingsborough CC Design Program" />
-        <h3>Kingsborough Community College</h3>
-        <p>Graphic Design & Illustration</p>
-        <p>Degree: A.S.</p>
-        <p class="description">A hands-on program focused on foundational skills in visual communication and illustration.</p>
-        <a href="https://www.kbcc.cuny.edu/academicdepartments/art/Graphic_Design.html" target="_blank">Learn More</a>
+        <img src="images/BronxCC.jpg" alt="Bronx Community College" />
+        <h3>Bronx Community College</h3>
+        <p> Digital Design</p>
+        <p>Degree: A.A.S.</p>
+        <p class="description">Prepares students for the dynamic field of digital design by providing a basic career-oriented education.</p>
+        <a href="https://www.bcc.cuny.edu/academics/academic-departments/art-and-music-department/degree-and-certificate-programs-courses/digital-design/" target="_blank">Learn More</a>
+      </div>
+       <div class="card">
+        <img src="images/HostosCC.jpg" alt="Kingsborough CC Design Program" />
+        <h3>Hostos Community College</h3>
+        <p>Digital Design & Animation</p>
+        <p>Degree: A.A.S.</p>
+        <p class="description">Provides students with a strong foundation for future occupations in graphic design, animation, motion graphics, and/or web design..</p>
+        <a href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Digital-Design-Animation" target="_blank">Learn More</a>
       </div>
       <!-- Copy and paste more cards per program -->
     </section>
@@ -56,5 +83,23 @@
       <a href="https://www.cuny.edu/about/">About CUNY</a>
     </nav>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdowns = document.querySelectorAll(".dropdown");
+  
+      dropdowns.forEach((dropdown) => {
+        dropdown.addEventListener("click", function (e) {
+          // Only trigger on smaller screens
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.classList.toggle("active");
+          }
+        });
+      });
+    });
+  </script>
+
+
 </body>
 </html>

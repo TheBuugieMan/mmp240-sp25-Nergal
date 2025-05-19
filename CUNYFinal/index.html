@@ -9,47 +9,104 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+  <div class="wrapper">
   <header>
-    <h1 id="logo">CUNY Design</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="associate.html">Associate</a></li>
-        <li><a href="bachelor.html">Bachelor</a></li>
-        <li><a href="digital.html">Digital Design</a></li>
-        <li><a href="animation.html">Animation</a></li>
-        <li><a href="industrial.html">Industrial Design</a></li>
-        <li><a href="brooklyn.html">Brooklyn</a></li>
-        <li><a href="bronx.html">Bronx</a></li>
-        <li><a href="manhattan.html">Manhattan</a></li>
-        <li><a href="queens.html">Queens</a></li>
+<h1 id="logo" style="margin: 60 auto;">
+  <a href="index.html">
+    <img src="images/@CUNYDESIGN Logo.png" alt="@CUNY Design Logo" style="height: 60px; width: auto;" />
+  </a>
+</h1>
+<h1 id="logo" style="margin: 60 auto;">
+  <a href="index.html">
+    <h1 id="logo"><a href="index.html">@CUNY Design Logo </a>
+  
+</h1>
+<ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+    
+        <li class="dropdown">
+          <a href="#">Degrees</a>
+          <ul class="dropdown-menu">
+            <li><a href="associate.html">Associate</a></li>
+            <li><a href="bachelor.html">Bachelor</a></li>
+          </ul>
+        </li>
+    
+        <li class="dropdown">
+          <a href="#">Discipline</a>
+          <ul class="dropdown-menu">
+            <li><a href="digital.html">Digital Design</a></li>
+            <li><a href="animation.html">Animation</a></li>
+            <li><a href="industrial.html">Industrial Design</a></li>
+          </ul>
+        </li>
+    
+        <li class="dropdown">
+          <a href="#">Borough</a>
+          <ul class="dropdown-menu">
+            <li><a href="brooklyn.html">Brooklyn</a></li>
+            <li><a href="bronx.html">Bronx</a></li>
+            <li><a href="manhattan.html">Manhattan</a></li>
+            <li><a href="queens.html">Queens</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
+    <button id="darkModeToggle">Toggle Dark Mode</button>
   </header>
 
   <main>
     <section class="hero">
-      <h2>Find Your Design Path</h2>
-      <p>Explore programs by borough, discipline, or degree.</p>
+      <h1>Find Your Design Path</h1>
+
     </section>
 
-    <section class="grid-container">
-      <!-- Sample card -->
-      <div class="program-card">
-        <img src="images/bmcc.jpg" alt="BMCC" />
-        <h3>BMCC</h3>
-        <p>Multimedia Programming & Design</p>
-        <p>Degree: A.S.</p>
-        <p class="description">The program prepares students for careers in multimedia industries.</p>
-        <a href="https://www.bmcc.cuny.edu/academics/programs/multimedia-programming/" target="_blank">Learn More</a>
-      </div>
-      <!-- Repeat cards or generate dynamically -->
-    </section>
+<section class="homepage-intro">
+  <h2>Welcome to @CUNY Design</h2>
+  <p>
+    Discover your path in the world of design through CUNY’s diverse and dynamic programs. Whether you're passionate about digital design, animation, or industrial design, this site is your guide to finding the right program for your future.
+  </p>
+
+  <h3>Why Choose CUNY?</h3>
+  <ul>
+    <li>✔️ Affordable, high-quality education</li>
+    <li>✔️ Programs across all five boroughs</li>
+    <li>✔️ Degrees that prepare you for real-world careers</li>
+    <li>✔️ Access to state-of-the-art labs and studios</li>
+    <li>✔️ Supportive faculty and creative community</li>
+  </ul>
+
+  <h3>What You Can Do Here</h3>
+  <p>
+    🔍 Search design programs by <strong>borough</strong>, <strong>discipline</strong>, or <strong>degree</strong>.<br>
+    📚 Learn about schools that offer specialized training in areas like <strong>Animation</strong> or <strong>Multimedia Design</strong>.<br>
+    📎 Get direct links to program pages on official CUNY websites.<br>
+    🎓 Find the program that matches your vision — and take the next step toward your future.
+  </p>
+
+  <p><em>Start exploring now. Your design journey begins here.</em></p>
+</section>
+
   </main>
-
+</div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdowns = document.querySelectorAll(".dropdown");
+  
+      dropdowns.forEach((dropdown) => {
+        dropdown.addEventListener("click", function (e) {
+          // Only trigger on smaller screens
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.classList.toggle("active");
+          }
+        });
+      });
+    });
+  </script>
+  
   <footer>
     <p>&copy; 2025 CUNY Design</p>
   </footer>
-  <button id="darkModeToggle">Toggle Dark Mode</button>
 </body>
 </html>
